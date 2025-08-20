@@ -15,7 +15,7 @@ void print(vector<int>&b){
 void combi(int start,vector<int>&b){
 	if(b.size()==r&&accumulate(b.begin(),b.end(),0)==100){
 		print(b);
-		return;
+		exit(0);
 	}
 	
 	for(int i=start+1;i<n;i++){
@@ -32,4 +32,6 @@ int main(){
 	}
 	sort(arr,arr+9);
 	combi(-1,b);
+	
+	return 0;
 }
