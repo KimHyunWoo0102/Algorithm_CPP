@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void printV(const vector<int> &v){
-	for(int i=0;i<v.size();i++){
+void printV(const vector<int> &v,int r=3){
+	for(int i=0;i<r;i++){
 		cout<<v[i]<<' ';
 	}
 	cout<<'\n';
@@ -14,6 +14,8 @@ void printA(const int v[], int size){
     }
     cout<<'\n';
 }
+
+//comment error
 
 bool comp(int i1,int i2){
 	return i1>i2;
@@ -29,7 +31,7 @@ int main(){
 	}
 	
 	do{
-		printV(v);
+		printV(v,2);
 	}while(next_permutation(v.begin(),v.end()));
 	
 	printV(v);
