@@ -2,7 +2,7 @@
 using namespace std;
 
 vector<int>v={1,2,3,4,5};
-int n=5,r=3;
+int n=5,r=4;
 
 void print(vector<int>& b){
 	for(auto item : b)cout<<item<<" ";
@@ -10,7 +10,7 @@ void print(vector<int>& b){
 }
 
 void combi(int start,vector<int>&b){
-	if(b.size()==r)
+	if(b.size()==r) 
 	{
 		print(b);		
 		return;
@@ -19,7 +19,7 @@ void combi(int start,vector<int>&b){
 	for(int i=start+1;i<n;i++){
 		b.push_back(v[i]);
 		combi(i,b);
-		b.pop_back();
+		b.pop_back(); //restoration
 	}
 	return;
 }
