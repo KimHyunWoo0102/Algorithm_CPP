@@ -20,7 +20,7 @@ int main(){
 	for(int i=0;i<n;i++)
 	{
 		cin>>input;
-		if (input.size() < str.size()) {
+		if (input.size() < sLen+lLen) {
     	cout << "NE\n";
     	continue;
 		}
