@@ -2,6 +2,9 @@
 using namespace std;
 
 string str,ret;
+int cnt;
+char ch;
+map<char,int>m;
 
 bool is_p(string& s) {
     string t = s;
@@ -14,15 +17,31 @@ int main(){
 	
 	cin>>str;
 	
-	sort(str.begin(),str.end());
-	
-	do{
-		if(is_p(str)){
-			cout<<str;
-			exit(0);
+	for(char ch:str)
+		m[ch]++;
+		
+	for(auto it:m){
+		if(it.second%2==1)
+		{
+			ch=it.first;
+			cnt++;
+			if(cnt==2){
+				cout<<"I'm Sorry Hansoo";
+				exit(-1);
+			}
 		}
-	}while(next_permutation(str.begin(),str.end()));
+	}	
+	
 			
-	cout<<"I'm Sorry Hansoo";
+	for(auto it:m){
+		ret+=string(it.second/2,it.first);
+	}
+	
+	if(ch)
+		cout<<ret<<ch;
+	else
+		cout<<ret;
+	reverse(ret.begin(),ret.end());
+	cout<<ret;
 	return 0;
 }
