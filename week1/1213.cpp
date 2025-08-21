@@ -27,7 +27,7 @@ int main(){
 			cnt++;
 			if(cnt==2){
 				cout<<"I'm Sorry Hansoo";
-				exit(-1);
+				exit(0);
 			}
 		}
 	}	
