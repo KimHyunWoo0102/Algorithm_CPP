@@ -16,17 +16,7 @@ int main(){
 			ret+=ch;
 	}
 	
-	str=ret;
-	
-	for(char ch:str){
-		if('a'<=ch&&ch<='z'){
-			ret+= (ch-'a'+13)%26+'a';	
-		}else if('A'<=ch&&ch<='Z'){
-			ret+=(ch-'A'+13)%26+'A';
-		}else
-			ret+=ch;
-	}
-	
 	cout<<ret;
+
 	return 0;
 }
