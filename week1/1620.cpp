@@ -25,7 +25,7 @@ int main(){
 		if(isdigit(tmp[0])){
 			cout<<s[stoi(tmp.c_str())-1]<<'\n';
 		}else{
-			cout<<m.at(tmp)<<'\n';
+			cout<<m.at(tmp)+1<<'\n';
 		}
 	}
 	return 0;
