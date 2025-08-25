@@ -45,7 +45,7 @@ int main(){
 		if(input=="end")break;
 		
 		if(is_a(input))
-			cout<<"<"<<input<<"> is accetable.\n";
+			cout<<"<"<<input<<"> is acceptable.\n";
 		else
 			cout<<"<"<<input<<"> is not acceptable.\n";
 	}
