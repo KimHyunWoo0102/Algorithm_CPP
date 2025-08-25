@@ -52,7 +52,7 @@ int main(){
 			arr[y1][x1]=1;
 		}
 		
-		print(arr,n,m);
+		//print(arr,n,m);
 		for(int j=0;j<n;j++){
 			for(int l=0;l<m;l++){
 				if(!visited[j][l]&&arr[j][l])
