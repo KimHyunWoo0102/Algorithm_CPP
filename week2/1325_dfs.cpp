@@ -9,11 +9,15 @@ int from,to;
 int cnt;
 
 vector<pair<int,int>>v;
-
-void dfs(int parent){
-	for(auto it:adj[parent]){
-		cnt++;	
-		dfs(it);
+bool visited[MAX_LEN];
+void dfs(int current){
+	visited[current]=true;
+	for(auto next:adj[current]){
+		if(!visited[next]){
+			visited[next]=true;
+			cnt++;
+			dfs(next);
+		}
 	}
 }
 
@@ -35,12 +39,13 @@ int main(){
 	
 	for(int i=1;i<=n;i++){
 		cnt=0;
+		memset(visited,false,sizeof(visited));
 		dfs(i);
 		max_cnt=max(cnt,max_cnt);
 		v.push_back({i,cnt});		
 	}	
 	
-	for(auto it:v){
+	for(auto &it:v){
 		if(it.second==max_cnt)
 			cout<<it.first<<" ";
 	}
