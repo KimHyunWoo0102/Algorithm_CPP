@@ -37,7 +37,6 @@ void go(){
 void combi(int start){
 	if(pick.size()==m){
 		go();
-		//do something
 		return;
 	}
 	
@@ -49,7 +48,6 @@ void combi(int start){
 }
 int main(){
 	cin>>n>>m;
-	
 	
 	for(int i=1;i<=n;i++)	{
 		for(int j=1;j<=n;j++)
