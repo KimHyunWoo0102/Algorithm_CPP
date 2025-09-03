@@ -49,7 +49,7 @@ int main(){
 		}
 	}	
 	
-	cout<<visited[0][0][0];
+	cout<<visited[0][0][0]-1;
 		
 			
 	
