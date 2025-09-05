@@ -21,9 +21,7 @@ int main(){
 	cin>>n;
 	for(int i=0;i<n;i++)
 		scanf(" %c",&arr[i]);
-	do{
-		if(v[0]==0)continue;
-		
+	do{		
 		string s;
 		bool f=true;
 		for(int i=0;i<n;i++){

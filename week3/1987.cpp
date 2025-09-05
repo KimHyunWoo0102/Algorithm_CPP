@@ -23,9 +23,9 @@ bool can_go(int y,int x){
 	return f;
 }
 void go(int y,int x,int cnt){
-	if(!can_go(y,x)){
-		ret=max(cnt,ret);
-	}
+
+	ret=max(cnt,ret);
+	
 	
 	for(int i=0;i<4;i++){
 		int ny=y+dy[i];
