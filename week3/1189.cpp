@@ -16,15 +16,19 @@ void print(){
 	}
 	cout<<'\n';
 }
-void dfs(int y,int x,int cnt){
+void dfs(int y,int x,int k,int cnt){
 	if(y==0&&x==c-1){
-		if(cnt==k){
+		if(cnt==k)
+		{
 			ret++;
 		}
+		
 		return;
 	}
 	
-	if(cnt>=k)return;
+	if(cnt>=k){
+		return;
+	}
 	
 	for(int i=0;i<4;i++){
 		int ny=y+dy[i];
@@ -35,7 +39,7 @@ void dfs(int y,int x,int cnt){
 		if(arr[ny][nx]!='.')continue;
 		
 		visited[ny][nx]=1;
-		dfs(ny,nx,cnt+1);
+		dfs(ny,nx,k,cnt+1);
 		visited[ny][nx]=0;
 	}
 }
@@ -48,9 +52,10 @@ int main(){
 			cin>>arr[i][j];
 	}
 	
-	visited[r-1][0]=1;
+	y1=r-1;x1=c-1;
+	visited[y1][0]=1;
 	
-	dfs(r-1,0,1);
+	dfs(y1,0,k,1);
 	
 	cout<<ret;
 	return 0;
